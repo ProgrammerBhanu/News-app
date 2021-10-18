@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Movie</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        
+        * {
+            color: white;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        #product {
+            width: 90%;
+            min-height: 500px;
+            margin: 5%;
+            display: flex;
+            padding: 20px;
+        }
+        
+        #spr {
+            color: red;
+        }
+        
+        button {
+            border: 1px solid red;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>About <span id="spr"></span> News</h1>
+    <button onclick="window.location.href = 'home.html'">Go Back</button>
+    <div id="product"></div>
+</body>
+<script src="news.js"></script>
+
+</html>

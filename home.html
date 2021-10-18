@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <style>
+        .box {
+            display: grid;
+            grid-template-columns: 300px auto auto;
+        }
+        
+        .header {
+            width: 300px;
+        }
+        
+        .header h3:hover {
+            color: red;
+            cursor: pointer;
+        }
+        
+        #product {
+            min-height: 500px;
+            margin: 5%;
+            display: grid;
+            row-gap: 1%;
+            padding: 20px;
+            grid-template-columns: 100%;
+            grid-auto-rows: auto;
+            justify-content: center;
+        }
+        
+        img {
+            width: 100%;
+            border: 1px solid white;
+        }
+        
+        .xyz {
+            display: grid;
+            grid-template-columns: 25% 65%;
+            column-gap: 5%;
+            border-bottom: 1px solid gray;
+        }
+        
+        .xyz h3:hover {
+            text-decoration: underline;
+        }
+        
+        .xyz div:nth-child(2) {
+            margin-right: 10px;
+        }
+        
+        #news-search {
+            background-color: #0c111b;
+            position: absolute;
+            top: 18%;
+            left: 1%;
+            height: 200px;
+            width: 270px;
+            border: 1px solid black;
+            overflow-y: scroll;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .box_div {
+            color: white;
+            padding-left: 10px;
+            background-color: #334366;
+        }
+        
+        .box_div p {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="header">
+            <h1>News App</h1>
+            <div class="hidden" id="news-search"></div>
+            <div class="box2">
+                <input oninput="debounce(searchData,1000)" type="text" id="news" placeholder="News">
+                <button onclick="main()">Search</button>
+            </div>
+            <h3>Disrupt</h3>
+            <h3>Startsup</h3>
+            <h3>Videos</h3>
+            <h3>Events</h3>
+            <h3>Webinars</h3>
+        </div>
+        <div id="product"></div>
+        <div id="news"></div>
+    </div>
+</body>
+<script src="home.js"></script>
+
+</html>
